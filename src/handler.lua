@@ -14,7 +14,7 @@ local re_gmatch = ngx.re.gmatch
 
 local JwtKeycloakHandler = BasePlugin:extend()
 
-JwtKeycloakHandler.PRIORITY = 1005
+JwtKeycloakHandler.PRIORITY = 10
 JwtKeycloakHandler.VERSION = "1.0.0"
 
 function table_to_string(tbl)
