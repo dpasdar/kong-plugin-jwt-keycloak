@@ -10,7 +10,7 @@ supported_platforms = {"linux", "macosx"}
 
 source = {
   url = "git://github.com/dpasdar/kong-plugin-jwt-keycloak",
-  tag = "v1.0.3",
+  tag = "v1.0.4",
 }
 description = {
   summary = "A Kong plugin that will validate tokens issued by keycloak",
