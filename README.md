@@ -1,3 +1,5 @@
+This is the forked version of the original plugin, only difference is the priority set to much lower to play nice with the infamous OIDC plugin.
+
 <h1>Kong plugin jwt-keycloak</h1>
 
 A plugin for the [Kong Microservice API Gateway](https://konghq.com/solutions/gateway/) to validate access tokens issued by [Keycloak](https://www.keycloak.org/). It uses the [Well-Known Uniform Resource Identifiers](https://tools.ietf.org/html/rfc5785) provided by [Keycloak](https://www.keycloak.org/) to load [JWK](https://tools.ietf.org/html/rfc7517) public keys from issuers that are specifically allowed for each endpoint.
