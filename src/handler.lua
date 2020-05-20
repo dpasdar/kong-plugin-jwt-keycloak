@@ -258,18 +258,18 @@ local function do_authentication(conf)
     end
 
     -- Verify the JWT registered claims
-    local ok_claims, errors = jwt:verify_registered_claims(conf.claims_to_verify)
-    if not ok_claims then
-        return false, { status = 401, message = "Token claims invalid: " .. table_to_string(errors) }
-    end
+    --local ok_claims, errors = jwt:verify_registered_claims(conf.claims_to_verify)
+    --if not ok_claims then
+    --    return false, { status = 401, message = "Token claims invalid: " .. table_to_string(errors) }
+    --end
 
     -- Verify maximum expiration
-    if conf.maximum_expiration ~= nil and conf.maximum_expiration > 0 then
-        local ok, errors = jwt:check_maximum_expiration(conf.maximum_expiration)
-        if not ok then
-            return false, { status = 403, message = "Token claims invalid: " .. table_to_string(errors) }
-        end
-    end
+    --if conf.maximum_expiration ~= nil and conf.maximum_expiration > 0 then
+    --    local ok, errors = jwt:check_maximum_expiration(conf.maximum_expiration)
+    --    if not ok then
+    --        return false, { status = 403, message = "Token claims invalid: " .. table_to_string(errors) }
+    --    end
+    --end
 
     -- Verify that the issuer is allowed
     if not validate_issuer(conf.allowed_iss, jwt.claims) then
